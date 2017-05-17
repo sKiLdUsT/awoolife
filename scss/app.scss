@@ -87,9 +87,10 @@ div {
       bottom: 2rem;
       right: 3rem;
       height: 3rem;
+      z-index: 10;
       background-color: #424242;
       border-radius: 5px;
-      opacity: 0.2;
+      opacity: 0.4;
       transition: opacity .3s ease-in-out;
       line-height: 40px;
       color: white;
