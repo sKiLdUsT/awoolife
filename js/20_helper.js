@@ -54,7 +54,7 @@ function animateStep(side, angle) {
                 nStep = angle + step;
                 break;
         }
-        document.getElementById('bg_rotate').style.transform = 'scale(1.4) rotate(' + nStep + 'deg)';
+        document.getElementById('bg_rotate').style.transform = 'translate(-50%, -40%) rotate(' + nStep + 'deg)';
         fieldBrightness(angle);
         angle = nStep;
         i++

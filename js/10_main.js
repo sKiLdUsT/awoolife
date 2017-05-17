@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     angle = 360 + angle;
                 if(angle > 360)
                     angle = 360 - angle;
-                document.getElementById('bg_rotate').style.transform = 'scale(1.4) rotate(' + angle + 'deg)';
+                document.getElementById('bg_rotate').style.transform = 'translate(-50%, -40%) rotate(' + angle + 'deg)';
                 fieldBrightness(angle);
                 o_x = s_x;
             }
