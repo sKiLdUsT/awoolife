@@ -112,3 +112,42 @@ function fieldBrightness(angle){
         percent = (angle / 180) * 100;
     el.style.filter = 'brightness('+percent+'%)';
 }
+
+function solveQuad(a, b, c) {
+    var sdelta;
+
+    sdelta = Math.sqrt(Math.pow(b, 2) - 4 * a * c);
+    if(sdelta > 0) {
+        if(b >= 0) {
+            return [(-b - sdelta) / 2 / a, 2 * c / (-b - sdelta)];
+        }
+        else {
+            return [2 * c / (-b + sdelta), (-b + sdelta) / 2 / a];
+        }
+    }
+    else if(sdelta == 0) {
+        return [-b / 2 / a];
+    }
+    else {
+        return [];
+    }
+}
+
+function setEdge(bg) {
+    var s, shift = .1;
+
+    shift *= 2;
+    with(document.documentElement) {
+        s = solveQuad(Math.pow(shift, 2) - 1, shift * clientHeight, (Math.pow(clientWidth, 2) + Math.pow(clientHeight, 2)) / 4);
+    }
+    if(s.length == 0) {
+        return; //shouldn't ever happen
+    }
+
+    s = Math.max.apply(void(0), s) * 2; //This is an assumption which I didn't bother proving
+
+    with(bg.style) {
+        width = s + "px";
+        height = s + "px";
+    }
+}
