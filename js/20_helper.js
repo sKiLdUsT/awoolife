@@ -114,7 +114,7 @@ function fieldBrightness(angle){
 }
 
 function solveQuad(a, b, c) {
-    var sdelta;
+    let sdelta;
 
     sdelta = Math.sqrt(Math.pow(b, 2) - 4 * a * c);
     if(sdelta > 0) {
@@ -134,7 +134,7 @@ function solveQuad(a, b, c) {
 }
 
 function setEdge(bg) {
-    var s, shift = .1;
+    let s, shift = .1;
 
     shift *= 2;
     with(document.documentElement) {

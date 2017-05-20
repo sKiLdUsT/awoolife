@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    addListenerMulti(document, "mouseup mouseout touchend touchcancel", () => {
+    addListenerMulti(document, "mouseup touchend touchcancel", () => {
         if(dragging){
             dragging = false;
             switch(true){
@@ -49,14 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    window.addEventListener("resize",
-                            (function() {
-                                var elem = document.querySelector("#bg_rotate");
-	                            setEdge(elem); //call one time
-                                return function() {
-                                    setEdge(elem);
-                                }
-                            })()); //I just don't know how to do it your modern way
+    window.addEventListener("resize", setEdge.bind(this, document.querySelector("#bg_rotate")));
+    setEdge(document.querySelector("#bg_rotate"));
 
     document.getElementById("about").addEventListener("click", e => {
         e.preventDefault();
