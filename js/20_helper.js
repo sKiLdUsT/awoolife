@@ -137,17 +137,15 @@ function setEdge(bg) {
     let s, shift = .1;
 
     shift *= 2;
-    with(document.documentElement) {
-        s = solveQuad(Math.pow(shift, 2) - 1, shift * clientHeight, (Math.pow(clientWidth, 2) + Math.pow(clientHeight, 2)) / 4);
-    }
+    s = solveQuad(Math.pow(shift, 2) - 1,
+                    shift * document.documentElement.clientHeight,
+                    (Math.pow(document.documentElement.clientWidth, 2) + Math.pow(document.documentElement.clientHeight, 2)) / 4);
     if(s.length == 0) {
         return; //shouldn't ever happen
     }
 
     s = Math.max.apply(void(0), s) * 2; //This is an assumption which I didn't bother proving
 
-    with(bg.style) {
-        width = s + "px";
-        height = s + "px";
-    }
+    bg.style.width = s + "px";
+    bg.style.height = s + "px";
 }
