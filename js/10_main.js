@@ -49,6 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    window.addEventListener("resize", setEdge.bind(this, document.querySelector("#bg_rotate")));
+    setEdge(document.querySelector("#bg_rotate"));
+
     document.getElementById("about").addEventListener("click", e => {
         e.preventDefault();
         let el = document.getElementsByClassName("info")[0];
