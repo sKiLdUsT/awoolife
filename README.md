@@ -1,6 +1,8 @@
 # awoolife
 
-Site source behind [awoo.life](https://awoo.life) 
+Site source behind [awoo.life](https://awoo.life)
+
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ### Dependencies
   * **[Node.JS](https://nodejs.org)** (including npm)
@@ -37,5 +39,5 @@ This is an example nginx config:
 This Project includes:
    * [Low Polygon Wolf](http://imgur.com/gallery/bRzwz) by [P1tchB1ack](http://imgur.com/user/P1tchB1ack) on imgur
    * Foreground and background graphics by [sKiLdUsT](https://skildust.com) licensed under this projects BSD-3-Clause License
-   * Howling sound taken from [YouTube](https://www.youtube.com/watch?v=op7fRsvWowA)
+   * Howling sound taken from [YouTube](https://www.youtube.com/watch?v=qCNs7Kyg7Ig)
   
