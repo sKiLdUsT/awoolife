@@ -1,6 +1,6 @@
 BSD 3-Clause License
 
-Copyright (c) 2016, cDeck Team
+Copyright (c) 2017, sKiLdUsT
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
